@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <style type="text/css">
+     ol{
+     line-height: 1.25em;
+      margin-bottom: 12px;
+       font-size:20px
+     }
+     </style>
+	<title>Tool and Script Details</title>
+</head>
+<body>
+<h1 style="text-align: center; background-color: lightblue">Tool and Script Details</h1>        
+<h2  style="font-family: cursive; color:blue;">ACM TeX to DOC Conversion</h2>
+ <ol>
+  <li><b>ACM_TeX2DOC_Pre-Cleanup.exe</b> - Initially pre-clean the TeX file suitable
+       for TeX to DOC Conversion</li>
+  <li><b>(VBA) ACM_TeX2DOC.bas</b> - It was VBA script for Pre-clean the 
+  DOC file. </li>      
+</ol> 
+
+<h2  style="font-family: cursive; color:blue;">ACM Track Changes</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>(VBA) ACM_Diff_DOC2TeX_PreCleanup.bas</b> - Initially pre-clean the CE DOC file suitable for auto SaveAs PDF, Tagging Small Caps, Serif, Monospace.
+   Identify figure caption etc.</li>
+  <li><b>ACM_Diff_Generator.exe</b> - It will create "Diff.tex" from CE Doc file. <mark><b>"Reject.docx"</b> need to open manually.</mark></li>   
+   <ol type="I">   
+        <li><b>ACM_Diff_Generator_LITE_Version.exe</b> - If "Diff.tex" was not created. Use this exe. For that we need to do manually "Reject.tex" and "Accept.tex"</li>
+     </ol>
+     <li>
+          <b>Diff_TeX_PreCleanup.exe</b> - It will Pre-clean the "Diff.tex"
+     </li>
+</ol>
+
+<h2  style="font-family: cursive; color:blue;">ACM Proof Creation</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>ACM_Proof_Pre-clean_V1.exe</b> It will Remove the content with tag of <tt>\DIFdel</tt> and remove only tag for <tt>\DIFadd</tt>. 
+  And do more preclean-up based on proof setting and it will move from "Track_Changes" to "Working" folder</li>
+</ol>
+
+<h2  style="font-family: cursive; color:blue;">ACM Binder Creation</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>ACM_Binder_Creation.exe</b> It will create the Mother TeX file for ACM Book for Binder creation. 
+  copyright.tex and bookseries.tex was maximum updated in the path. Numbered 
+  Chapter child TeX file, preamble will be commented for binder creation</li>
+</ol>
+
+<h2  style="font-family: cursive; color:blue;">ACM Index Pre Cleanup</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>ACM_Index-Pre-clean.exe</b> It will pre-clean Index TeX file. Suitable for insert the index in TeX file.</li>
+</ol>
+
+<h2  style="font-family: cursive; color:blue;">ACM Index Count</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>ACM_Index_Count.exe</b> It will count the Index for First level, Second level, Third level seperately and printed. Also print total Index count</li>
+</ol>
+
+<h2  style="font-family: cursive; color:blue;">ACM Binder PDF multiple copied for Final Delivery</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>ACM_PDF_Page_Splitter.exe</b> It will copy the Binder PDF multiple times, renamed as per Final Delivery
+  for XML and E-Pub Delivery.
+  </li>
+</ol>
+
+<hr>
+
+<h2  style="font-family: cursive; color:blue;">Junk Process</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>Junk_Clear-V1.exe</b> It will convert all the Junk character to respective TeX command
+with any type of Input Encoding.  
+  .</li>
+</ol>
+
+<h2  style="font-family: cursive; color:blue;">ISE Diff package creation</h2>
+ <ol style="line-height: 1.5em; margin-bottom: 15px">
+  <li><b>DIF_Create.exe</b> It will copy the Edited.tex, Diff.tex and Diff.PDF to Specified folder and Renamed. Edited.tex content was copied to DOC on same folder with correct file name and zipped.</li>
+</ol>
+
+</body>
+</html>
