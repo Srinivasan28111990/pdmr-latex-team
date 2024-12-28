@@ -60,8 +60,8 @@
 }
 
 /* Clear floats after the columns */
-/*.row:after {
-  content: "";
+.row:after {
+  /*content: "";*/
   display: table;
-  clear: both;*/
+  /*clear: both;/*
 /*  </style>*/
