@@ -54,7 +54,7 @@
  }
 .column {
   float: left;
-  width: 33.33%;
+  width: 30%;
   padding: 10px;
   height: 250px; /* Should be removed. Only for demonstration */
 }
