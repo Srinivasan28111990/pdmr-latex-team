@@ -9,14 +9,43 @@
      line-height: 1.25em;
       margin-bottom: 12px;
        font-size:20px
-     }</style>
+     }
+	<style>
+span.a {
+  display: inline; /* the default for span */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;  
+  background-color: yellow; 
+}
+
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+
+span.c {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+</style>
+	</style>
 </head>
 <body>
 <h1 style="text-align: center; background-color: lightblue; font-size: 40pt">EMS LaTeX Codes</h1>
 <h1 style="font-family: cursive">List have display equation</h1>
 <p>Refer §5.0.8 Displayed formulas in list items. <a href="https://tex.stackexchange.com/a/188151">Heiko Oberdiek’s construction</a></p>
 <p>
-	<pre>
+<span class="c"><pre>
         <code background-color="lightgray" display="inline-block"> 
 \makeatletter
 \patchcmd\start@gather{$$}{%
@@ -41,7 +70,7 @@
 }{}{\errmessage{Cannot patch \string\mathdisplay}}
 \makeatother
         </code> 
-    </pre>
+    </pre></span>
 	</p>
 </body>
 </html>
