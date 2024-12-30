@@ -55,13 +55,12 @@
 .column {
   float: left;
   width: 33%;
-  padding: 5px;
-  height: 250px; /* Should be removed. Only for demonstration */
+  padding: 0px;
+  height: 200px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
-.row:after {
-  content: "";
+.row{
   display: table;
   clear: both;
 /*  </style>*/
