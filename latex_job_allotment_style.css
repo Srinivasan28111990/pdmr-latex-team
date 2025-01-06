@@ -63,5 +63,6 @@
   display: table;
 /*  </style>*/
 p.ex1 {
-  margin-top: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
