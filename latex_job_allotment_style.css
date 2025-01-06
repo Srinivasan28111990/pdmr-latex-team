@@ -66,3 +66,6 @@ p.ex1 {
   margin-top: -10px;
   margin-bottom: -30px;
 }
+  .lock-scroll {
+  overflow: hidden;
+}
