@@ -57,5 +57,11 @@
     \begingroup\grabbox0\hbox{\fbox{\usebox0}\endgroup}%
   }
 </code></pre>
+<h1 style="font-family: cursive">Highlight the \text and \textup</h1>
+<code><pre>	
+\usepackage{soul}
+\renewcommand{\textup}[1]{\textcolor{purple}{\mbox{\upshape #1}}}
+\renewcommand{\text}[1]{\textcolor{orange}{\hbox{#1}}}
+	</code></pre>
 </body>
 </html>
