@@ -21,22 +21,32 @@
   document.execCommand("copy");
   document.body.removeChild(input); 
 }
-	</script>
+// Select all <li> elements within the <ul> with id "myList"
+const listItems = document.querySelectorAll('#myList li');
+// Loop through each <li> element
+listItems.forEach((li) => {
+  // Create a new <button> element
+  const button = document.createElement('button');  
+  // Set the text content of the button to be the same as the <li>
+  button.textContent = li.textContent;  
+  // Replace the <li> with the new <button>
+  li.parentNode.replaceChild(button, li);
+});</script>
 </head>
 <body>
 <h1 style="text-align: center; background-color: lightblue; font-size: 40pt">EMS Default Query</h1>
 <h1 style="font-family: cursive">Meta Data Details</h1>
-<ol type=1>
-  	<li><button id="myButton" onclick="copyClipboard()">Please provide missing MR ID and ORCID for XXXXX and XXXXXXX</button></li>
-	<li>Please check and confirm whether the primary and secondary classification codes are correct as set.</li>
-	<li>Please check if Keywords are fully correct.</li>
-	<li>Please confirm if the ROR ID for ``University of '' is xxxxxx.</li>
-	<li>Please check and confirm whether the authors' address is correct.</li>
-	<li>Please note that, as per style, not more than six keywords are allowed. Kindly check and make necessary changes.</li>
-	<li>Per style, please reduce the keywords list to 2-6.</li>
-	<li>Please note that, as per style, reference citations are not allowed in the abstract. Hence, the references have been rephrased using the author names and publication year.</li>
-	<li>Please note that, per style, there must be exactly one primary code. Hence, the first code has been designated as primary and the rest as secondary. Please confirm if this is correct.</li>
-	<li>Please check if the addresses are fully correct.</li>
+<ol type=1 id="myList">
+  	<button id="myButton" onclick="copyClipboard()">Please provide missing MR ID and ORCID for XXXXX and XXXXXXX</button>
+	<button id="myButton" onclick="copyClipboard()">Please check and confirm whether the primary and secondary classification codes are correct as set.</button>
+	<button id="myButton" onclick="copyClipboard()">Please check if Keywords are fully correct.</button>
+	<button id="myButton" onclick="copyClipboard()">Please confirm if the ROR ID for ``University of '' is xxxxxx.</button>
+	<button id="myButton" onclick="copyClipboard()">Please check and confirm whether the authors' address is correct.</button>
+	<button id="myButton" onclick="copyClipboard()">Please note that, as per style, not more than six keywords are allowed. Kindly check and make necessary changes.</button>
+	<button id="myButton" onclick="copyClipboard()">Per style, please reduce the keywords list to 2-6.</button>
+	<button id="myButton" onclick="copyClipboard()">Please note that, as per style, reference citations are not allowed in the abstract. Hence, the references have been rephrased using the author names and publication year.</button>
+	<button id="myButton" onclick="copyClipboard()">Please note that, per style, there must be exactly one primary code. Hence, the first code has been designated as primary and the rest as secondary. Please confirm if this is correct.</button>
+	<button id="myButton" onclick="copyClipboard()">Please check if the addresses are fully correct.</button>
 </ol>
 	
 <h1 style="font-family: cursive">Line Breaking</h1>
