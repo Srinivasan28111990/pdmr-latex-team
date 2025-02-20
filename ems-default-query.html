@@ -10,43 +10,21 @@
       margin-bottom: 12px;
        font-size:20px
      }</style>
-	<script>
-		function copyClipboard() {
-  var copyText = document.getElementById("myButton").innerHTML;
-  
-  var input = document.createElement("input");
-  input.value = copyText;
-  document.body.appendChild(input);
-  input.select();
-  document.execCommand("copy");
-  document.body.removeChild(input); 
-}
-// Select all <li> elements within the <ul> with id "myList"
-const listItems = document.querySelectorAll('#myList li');
-// Loop through each <li> element
-listItems.forEach((li) => {
-  // Create a new <button> element
-  const button = document.createElement('button');  
-  // Set the text content of the button to be the same as the <li>
-  button.textContent = li.textContent;  
-  // Replace the <li> with the new <button>
-  li.parentNode.replaceChild(button, li);
-});</script>
 </head>
 <body>
 <h1 style="text-align: center; background-color: lightblue; font-size: 40pt">EMS Default Query</h1>
 <h1 style="font-family: cursive">Meta Data Details</h1>
-<ol type=1 id="myList">
-  	<button id="myButton" onclick="copyClipboard()">Please provide missing MR ID and ORCID for XXXXX and XXXXXXX</button></br>
-	</br><button id="myButton" onclick="copyClipboard()">Please check and confirm whether the primary and secondary classification codes are correct as set.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Please check if Keywords are fully correct.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Please confirm if the ROR ID for ``University of '' is xxxxxx.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Please check and confirm whether the authors' address is correct.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Please note that, as per style, not more than six keywords are allowed. Kindly check and make necessary changes.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Per style, please reduce the keywords list to 2-6.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Please note that, as per style, reference citations are not allowed in the abstract. Hence, the references have been rephrased using the author names and publication year.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Please note that, per style, there must be exactly one primary code. Hence, the first code has been designated as primary and the rest as secondary. Please confirm if this is correct.</button>
-	</br><button id="myButton" onclick="copyClipboard()">Please check if the addresses are fully correct.</button>
+<ol type=1>
+  	<li>Please provide missing MR ID and ORCID for XXXXX and XXXXXXX</li>
+	<li>Please check and confirm whether the primary and secondary classification codes are correct as set.</li>
+	<li>Please check if Keywords are fully correct.</li>
+	<li>Please confirm if the ROR ID for ``University of '' is xxxxxx.</li>
+	<li>Please check and confirm whether the authors' address is correct.</li>
+	<li>Please note that, as per style, not more than six keywords are allowed. Kindly check and make necessary changes.</li>
+	<li>Per style, please reduce the keywords list to 2-6.</li>
+	<li>Please note that, as per style, reference citations are not allowed in the abstract. Hence, the references have been rephrased using the author names and publication year.</li>
+	<li>Please note that, per style, there must be exactly one primary code. Hence, the first code has been designated as primary and the rest as secondary. Please confirm if this is correct.</li>
+	<li>Please check if the addresses are fully correct.</li>
 </ol>
 	
 <h1 style="font-family: cursive">Line Breaking</h1>
