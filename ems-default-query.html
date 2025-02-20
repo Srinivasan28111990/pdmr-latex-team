@@ -10,7 +10,18 @@
       margin-bottom: 12px;
        font-size:20px
      }</style>
-	<script src="emsjavascript.js"></script>
+	<script>
+		function copyClipboard() {
+  var copyText = document.getElementById("myButton").innerHTML;
+  
+  var input = document.createElement("input");
+  input.value = copyText;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand("copy");
+  document.body.removeChild(input); 
+}
+	</script>
 </head>
 <body>
 <h1 style="text-align: center; background-color: lightblue; font-size: 40pt">EMS Default Query</h1>
