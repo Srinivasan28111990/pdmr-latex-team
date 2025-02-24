@@ -64,6 +64,21 @@
 <code><pre>	
 \tikzstyle{every node}=[font=\small]
 </code></pre>
+	<hr>
+<h1 style="font-family: cursive">Fences for \langle and \rangle</h1>
+<code><pre>	
+\makeatletter
+\newsavebox{\@brx}
+\newcommand{\llangle}[1][]{\savebox{\@brx}{\(\m@th{#1\langle}\)}%
+  \mathopen{\copy\@brx\kern-0.5\wd\@brx\usebox{\@brx}}}
+\newcommand{\rrangle}[1][]{\savebox{\@brx}{\(\m@th{#1\rangle}\)}%
+  \mathclose{\copy\@brx\kern-0.5\wd\@brx\usebox{\@brx}}}
+\makeatother</code></pre>
+<hr>
+<h1 style="font-family: cursive">Fixing \small for all in TikZ</h1>
+<code><pre>	
+\tikzstyle{every node}=[font=\small]
+</code></pre>
 
 </body>
 </html>
