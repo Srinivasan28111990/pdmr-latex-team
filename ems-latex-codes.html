@@ -78,5 +78,13 @@
 <b>For \llbracket, \rrbracket</b><br/>
 <code><pre>\usepackage[only,llbracket,rrbracket]{stmaryrd}</code></pre>
 
+<hr>
+<h1 style="font-family: cursive">Customs labels in enumerate </h1>
+<code><pre>
+\makeatletter
+\newcommand{\mylabel}[2]{#2\def\@currentlabel{#2}\label{#1}}
+\makeatother
+%\item[(\mylabel{thm:3.1-ii.1}{ii.1})]
+</pre></code>
 </body>
 </html>
