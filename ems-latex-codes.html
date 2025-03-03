@@ -86,5 +86,16 @@
 \makeatother
 %\item[(\mylabel{thm:3.1-ii.1}{ii.1})]
 </pre></code>
+
+
+<hr>
+<h1 style="font-family: cursive">Pushing the equation towards left</h1>
+<code><pre>
+\makeatletter
+\newcommand{\pushright}[1]{\ifmeasuring@#1\else\omit\hfill$\displaystyle#1$\fi\ignorespaces}
+\makeatother		
+</pre></code>
+<b>In Text: </b><code><pre>\pushright{(k=0, \ldots, m(n)-1),}</pre></code>
+	
 </body>
 </html>
