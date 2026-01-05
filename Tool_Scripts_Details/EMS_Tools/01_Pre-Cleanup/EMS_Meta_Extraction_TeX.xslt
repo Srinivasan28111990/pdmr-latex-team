@@ -28,6 +28,7 @@ paper = default,
 ]{ems-journal}
 
 %\usepackage{refcheck}
+\usepackage{showframe}	
 \usepackage{query}	
 
 \allowdisplaybreaks[2]
@@ -99,4 +100,5 @@ paper = default,
 \maketitle
 </xsl:text>
 </xsl:template>
+
 </xsl:stylesheet>
