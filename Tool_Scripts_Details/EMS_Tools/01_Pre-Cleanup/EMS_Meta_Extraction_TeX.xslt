@@ -33,6 +33,8 @@ paper = default,
 
 \allowdisplaybreaks[2]
 
+\everymath{\color{violet}}
+
 \begin{document}
 \editflow{</xsl:text><xsl:value-of select="article-meta/article-id[@pub-id-type='editflow']"/><xsl:text>}
 \firstpage{5555}
