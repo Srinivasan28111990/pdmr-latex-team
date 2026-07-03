@@ -16,7 +16,21 @@
 </head>
 <body style="margin: 5px">
 <h1 style="text-align: center; background-color: lightblue; font-size: 40pt">EMS LaTeX Codes</h1>
-<h1 style="font-family: cursive">List have display equation</h1>
+<h1 style="font-family: cursive">Breaking formulas.</h1>
+<p>Refer §4.3.3 Breaking formulas.</p>
+       <pre><code> 
+\newcommand{\ordphantom}[1]{\mathord{\hphantom{#1}}} 		% hidden prefix ends with an ordinary atom
+\newcommand{\opphantom}[1]{\mathop{\hphantom{#1}}}		% hidden prefix ends with a math operator
+\newcommand{\binphantom}[1]{\mathbin{\hphantom{#1}}}		% hidden prefix ends with a binary operator
+\newcommand{\relphantom}[1]{\mathrel{\hphantom{#1}}}		% hidden prefix ends with a relation
+\newcommand{\openphantom}[1]{\mathopen{\hphantom{#1}}}		% hidden prefix ends with an opening delimiter
+\newcommand{\closephantom}[1]{\mathclose{\hphantom{#1}}}	% hidden prefix ends with a closing delimiter
+\newcommand{\punctphantom}[1]{\mathpunct{\hphantom{#1}}}	% hidden prefix ends with punctuation
+\newcommand{\innerphantom}[1]{\mathinner{\hphantom{#1}}}	% hidden prefix is an inner formula
+        </code></pre>
+	<hr>
+	
+	<h1 style="font-family: cursive">List have display equation</h1>
 <p>Refer §5.0.8 Displayed formulas in list items. <a href="https://tex.stackexchange.com/a/188151">Heiko Oberdiek’s construction</a></p>
        <pre><code> 
 \makeatletter
