@@ -10,17 +10,17 @@
       margin-bottom: 12px;
        font-size:20px
      }
-	.copy-text {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            display: inline-block;
-            transition: background 0.2s;
-        }
-        .copy-text:hover {
-            background-color: #e0e0e0;
-        }
+		/* Makes the list items look clickable */
+		ol li {
+			cursor: pointer;
+			padding: 4px 8px;
+			transition: background 0.2s, color 0.2s;
+		}
+		/* Highlights the item when you hover over it */
+		ol li:hover {
+			background-color: #f0f7ff;
+			color: #0056b3;
+		}
 	</style>
 </head>
 <body>
@@ -29,7 +29,7 @@
 <h1 style="text-align: center; background-color: lightblue; font-size: 40pt">EMS Default Query</h1>
 <h1 style="font-family: cursive">Meta Data Details</h1>
 <ol type=1>
-  	<li class="copy-text" onclick="copyThisText(this)">Please provide missing MR ID and ORCID for XXXXX and XXXXXXX</li>
+  	<li onclick="copyText(this)">Please provide missing MR ID and ORCID for XXXXX and XXXXXXX</li>
 	<li>Please check and confirm whether the primary and secondary classification codes are correct as set.</li>
 	<li>Please check if Keywords are fully correct.</li>
 	<li>Please confirm if the ROR ID for ``University of '' is xxxxxx.</li>
@@ -118,30 +118,30 @@
 	<li></li>
 </ol>
 
-
 	<script>
-        function copyThisText(element) {
-            // Get the text content from the clicked element
-            const textToCopy = element.innerText;
+		function copyText(element) {
+			const textToCopy = element.innerText;
 
-            // Use the Clipboard API to copy the text
-            navigator.clipboard.writeText(textToCopy)
-                .then(() => {
-                    // Optional: Provide visual feedback to the user
-                    const originalText = element.innerText;
-                    element.innerText = "Copied! ✓";
-                    element.style.color = "green";
+			navigator.clipboard.writeText(textToCopy)
+				.then(() => {
+					const originalText = element.innerText;
+					
+					// Provide visual confirmation
+					element.innerText = originalText + " ── (Copied! ✓)";
+					element.style.color = "green";
+					element.style.fontWeight = "bold";
 
-                    // Reset the text back to normal after 1.5 seconds
-                    setTimeout(() => {
-                        element.innerText = originalText;
-                        element.style.color = "";
-                    }, 1500);
-                })
-                .catch(err => {
-                    console.error("Failed to copy text: ", err);
-                });
-        }
-    </script>
+					// Reset back to original text after 1.2 seconds
+					setTimeout(() => {
+						element.innerText = originalText;
+						element.style.color = "";
+						element.style.fontWeight = "";
+					}, 1200);
+				})
+				.catch(err => {
+					console.error("Could not copy text: ", err);
+				});
+		}
+	</script>
 </body>
 </html>
