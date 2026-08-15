@@ -117,6 +117,31 @@
 	<li>Please provide the updates for arXiv preprints in references [] and [].</li>
 	<li></li>
 </ol>
-	
+
+
+	<script>
+        function copyThisText(element) {
+            // Get the text content from the clicked element
+            const textToCopy = element.innerText;
+
+            // Use the Clipboard API to copy the text
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    // Optional: Provide visual feedback to the user
+                    const originalText = element.innerText;
+                    element.innerText = "Copied! ✓";
+                    element.style.color = "green";
+
+                    // Reset the text back to normal after 1.5 seconds
+                    setTimeout(() => {
+                        element.innerText = originalText;
+                        element.style.color = "";
+                    }, 1500);
+                })
+                .catch(err => {
+                    console.error("Failed to copy text: ", err);
+                });
+        }
+    </script>
 </body>
 </html>
