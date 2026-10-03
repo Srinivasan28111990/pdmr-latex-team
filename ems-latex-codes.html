@@ -24,6 +24,16 @@
 {\pushQED{\qed}}
 {\popQED}
 </code></pre> 
+Then wrap the proof into this new environment like this:
+<pre><code> 
+	\section{Proof of Theorem~\ref{thm:main}}
+\begin{untitledproof}
+We first observe that ...
+...
+and hence the assertion follows.
+\end{untitledproof}
+</code></pre>
+It should be the copyeditor's task to find the beginning of the proof and add the <pre><code>\begin{untitledproof}</code></pre> there. In case of doubts, please ask for the authors' help in the galley proof. The <pre><code>\end{untitledproof}</code></pre> part is to replace the unpaired \qed symbol.
 		
 		<h1 style="font-family: cursive">Breaking formulas.</h1>
 <p>Refer §4.3.3 Breaking formulas.</p>
