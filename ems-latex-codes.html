@@ -18,6 +18,42 @@
 	<p class="ex1"><a href="home.html" class="button"><button type="button">HOME</button></a>	
 <a href="ems-default-query.html" class="button"><button type="button">EMS Default Query</button></a>
 <h1 style="text-align: center; background-color: lightblue; font-size: 40pt">EMS LaTeX Codes</h1>
+<h1 style="font-family: cursive">Increase the size of \langle ... \rangle</h1>
+<pre><code>
+\usepackage{tikz}
+\newcommand{\idealbrackets}[1]{%
+  \mathinner{%
+    \begin{tikzpicture}[baseline=(M.base)]
+      \node[inner sep=0pt, outer sep=0pt] (M)
+        {$\displaystyle #1$};
+      \draw[line width=0.45pt]
+        ([xshift=-5pt]M.north west) --
+        ([xshift=-11pt]M.west) --
+        ([xshift=-5pt]M.south west);
+      \draw[line width=0.45pt]
+        ([xshift=5pt]M.north east) --
+        ([xshift=11pt]M.east) --
+        ([xshift=5pt]M.south east);
+    \end{tikzpicture}%
+  }%
+}
+</code></pre>
+<p><b>and use it like this </b></p>
+<pre><code>
+\[
+\idealbrackets{
+\begin{aligned}
+xy &= q^{-\binom{n+1}{2}}z^{n+1},\\
+xt_i &= q^{\alpha_i}z^it_{i-1}
+&& \text{for }1\leq i\leq n,\\
+yt_i &= q^{\beta_i}z^{n-i}t_{i+1}
+&& \text{for }0\leq i\leq n-1,\\
+t_{i-1}t_{j+1} &= q^{\gamma_{ij}}z^{j-i+1}t_it_j
+&& \text{for }1\leq i\leq j\leq n-1
+\end{aligned}
+}
+\]	
+</code></pre>	
 <h1 style="font-family: cursive">\qed command in outside a theorem-like environment</h1>
 <pre><code> 
 \newenvironment{untitledproof}
